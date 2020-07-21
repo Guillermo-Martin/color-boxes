@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 // import './../assets/styles/styles.css';
 
 class Box extends Component {
+  // create defaultProps to accept props from ColorBoxes
   static defaultProps = {
-    randomColor: ""
+    randomColor: "",
   }
 
+  // pass props as state (will create random default box color)
   state = {
-    currentColor: this.props.randomColor
+    currentColor: this.props.randomColor,
   }
 
-
-  // for an individual box
+  // generate random color for each individual box
   generateColor = () => {
     // create random numbers for rgb and pass numbers as props
     let randomNum1 = Math.floor((Math.random() * 255) + 1);
@@ -23,11 +24,9 @@ class Box extends Component {
     
     // change state to be the random numbers
     this.setState({ currentColor: rgbColors }); 
-    console.log("clicked");
   }
 
-  render(props) {
-    
+  render() {
     return(
       <div 
         className="Box" 
@@ -35,18 +34,16 @@ class Box extends Component {
           {
             width: "15rem",
             height: "15rem",
-            // pass color for backgroundColor
+            // pass currentCurrent color for backgroundColor
             backgroundColor: `rgb(${this.state.currentColor})`,
             border: "2px solid black"
           }
         }
         onClick={this.generateColor}
       >
-      </div>
-      
+      </div>   
     );
   }
-  
 }
 
 export default Box;
