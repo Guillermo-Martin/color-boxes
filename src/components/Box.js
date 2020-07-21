@@ -15,6 +15,7 @@ function Box(props) {
           height: "15rem",
           // pass color for backgroundColor
           backgroundColor: `${color}`,
+          border: "2px solid black"
         }
       }
     >
