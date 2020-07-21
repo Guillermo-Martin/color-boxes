@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 // import './../assets/styles/styles.css';
 
 class Box extends Component {
-  state = {
-    currentColor: ""
+  static defaultProps = {
+    randomColor: ""
   }
+
+  state = {
+    currentColor: this.props.randomColor
+  }
+
 
   // for an individual box
   generateColor = () => {
@@ -17,11 +22,12 @@ class Box extends Component {
     let rgbColors = randomNum1 + "," + randomNum2 + "," + randomNum3;
     
     // change state to be the random numbers
-    this.setState({ currentColor: rgbColors}); 
-    
+    this.setState({ currentColor: rgbColors }); 
+    console.log("clicked");
   }
 
-  render() {
+  render(props) {
+    
     return(
       <div 
         className="Box" 
@@ -36,7 +42,6 @@ class Box extends Component {
         }
         onClick={this.generateColor}
       >
-
       </div>
       
     );

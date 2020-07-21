@@ -7,13 +7,6 @@ class ColorBoxes extends Component {
     numBoxes: 5
   }
 
-  // create state to hold numbers for rgb color
-  // will eventually hold a random number
-  state = {
-    backgroundColor: "",
-  }
-
-  // add onClick listener to generate random numbers
   render() {
     
     // create an empty array to hold boxes
@@ -25,7 +18,8 @@ class ColorBoxes extends Component {
       let RGB = Math.floor((Math.random() * 255) + 1) + "," + Math.floor((Math.random() * 255) + 1) + "," + Math.floor((Math.random() * 255) + 1);
       
       // create a Box component
-      boxes.push(<Box backgroundColor={RGB} />);
+      boxes.push(<Box randomColor={RGB} />);
+      
     }
 
 
