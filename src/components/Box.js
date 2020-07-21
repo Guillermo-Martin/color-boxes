@@ -1,7 +1,10 @@
 import React from 'react';
 // import './../assets/styles/styles.css';
 
-function Box() {
+function Box(props) {
+  // define variable to hold backgroundColor prop
+  let color = `rgb(${props.backgroundColor})`;
+
   return(
     <div 
       className="Box" 
@@ -9,7 +12,8 @@ function Box() {
         {
           width: "15rem",
           height: "15rem",
-          backgroundColor: "rgb(255, 0, 0)",
+          // pass color for backgroundColor
+          backgroundColor: `${color}`,
         }
       }
     >
