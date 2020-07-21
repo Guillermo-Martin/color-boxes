@@ -3,9 +3,7 @@ import './../assets/styles/styles.css';
 
 function Box() {
   return(
-    <div className="Box">
-      This is a box.
-    </div>
+    <div className="Box"></div>
   );
 }
 

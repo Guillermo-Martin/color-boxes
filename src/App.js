@@ -1,11 +1,11 @@
 import React from 'react';
-import Box from './components/Box';
+import ColorBoxes from './containers/ColorBoxes';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Box />
+      <ColorBoxes />
     </div>
   );
 }
