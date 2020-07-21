@@ -13,21 +13,6 @@ class ColorBoxes extends Component {
     backgroundColor: "",
   }
 
-  // for an individual box
-  generateColor = () => {
-    // create random numbers for rgb and pass numbers as props
-    let randomNum1 = Math.floor((Math.random() * 255) + 1);
-    let randomNum2 = Math.floor((Math.random() * 255) + 1);
-    let randomNum3 = Math.floor((Math.random() * 255) + 1);
-
-    // create string to hold random numbers
-    let rgbColors = randomNum1 + "," + randomNum2 + "," + randomNum3;
-    
-    // change state to be the random numbers
-    this.setState({ backgroundColor: rgbColors}); 
-  }
-
-  
   // add onClick listener to generate random numbers
   render() {
     
@@ -40,7 +25,7 @@ class ColorBoxes extends Component {
       let RGB = Math.floor((Math.random() * 255) + 1) + "," + Math.floor((Math.random() * 255) + 1) + "," + Math.floor((Math.random() * 255) + 1);
       
       // create a Box component
-      boxes.push(<Box onClick={this.generateColor} backgroundColor={RGB} />);
+      boxes.push(<Box backgroundColor={RGB} />);
     }
 
 
