@@ -8,13 +8,20 @@ class ColorBoxes extends Component {
     backgroundColor: "255, 0, 0"
   }
 
+  generateColor = () => {
+    // create random numbers for rgb and pass numbers as props
+    let randomNum = Math.floor((Math.random() * 255) + 1);
+    alert(randomNum);
+  }
+
   // render multiple boxes
-  // create random numbers for rgb and pass numbers as props
+  
   // add onClick listener to generate random numbers
   render() {
     return(
       <div>
-        <Box 
+        <Box
+          onClick={this.generateColor}
           backgroundColor={this.state.backgroundColor}
         />
       </div>

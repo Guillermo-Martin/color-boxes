@@ -8,6 +8,7 @@ function Box(props) {
   return(
     <div 
       className="Box" 
+      onClick={props.onClick}
       style={
         {
           width: "15rem",
