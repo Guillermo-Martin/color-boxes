@@ -7,9 +7,9 @@ function Box() {
       className="Box" 
       style={
         {
-          border: "2px solid black",
           width: "15rem",
           height: "15rem",
+          backgroundColor: "rgb(255, 0, 0)",
         }
       }
     >
