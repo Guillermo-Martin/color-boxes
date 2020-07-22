@@ -14,14 +14,14 @@ class Box extends Component {
 
   // generate random color for each individual box
   generateColor = () => {
-    // create random numbers for rgb and pass numbers as props
-    let randomNum1 = Math.floor((Math.random() * 255) + 1);
-    let randomNum2 = Math.floor((Math.random() * 255) + 1);
-    let randomNum3 = Math.floor((Math.random() * 255) + 1);
+    // array to hold random numbers for rgb
+    let rgbColors = [];
 
-    // create string to hold random numbers
-    let rgbColors = randomNum1 + "," + randomNum2 + "," + randomNum3;
-    
+    // create 3 random numbers
+    for(let i = 0; i < 3; i++) {
+      rgbColors.push(Math.floor((Math.random() * 255) + 1));
+    }
+  
     // change state to be the random numbers
     this.setState({ currentColor: rgbColors }); 
   }
