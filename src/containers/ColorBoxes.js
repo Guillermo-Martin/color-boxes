@@ -4,7 +4,7 @@ import Box from './../components/Box';
 class ColorBoxes extends Component {
   // create defaultProps (will be the number of boxes to make)
   static defaultProps = {
-    numBoxes: 66,
+    numBoxes: 98,
   }
 
   render() {
