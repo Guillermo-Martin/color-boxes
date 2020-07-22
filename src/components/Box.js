@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './../assets/styles/styles.css';
+import './../assets/styles/styles.css';
 
 class Box extends Component {
   // create defaultProps to accept props from ColorBoxes
@@ -29,14 +29,11 @@ class Box extends Component {
   render() {
     return(
       <div 
-        className="Box" 
+        className="Box"
         style={
           {
-            width: "15rem",
-            height: "15rem",
             // pass currentCurrent color for backgroundColor
-            backgroundColor: `rgb(${this.state.currentColor})`,
-            border: "2px solid black"
+            backgroundColor: `rgb(${this.state.currentColor})`
           }
         }
         onClick={this.generateColor}

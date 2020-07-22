@@ -4,7 +4,7 @@ import Box from './../components/Box';
 class ColorBoxes extends Component {
   // create defaultProps (will be the number of boxes to make)
   static defaultProps = {
-    numBoxes: 5,
+    numBoxes: 66,
   }
 
   render() {
@@ -21,7 +21,7 @@ class ColorBoxes extends Component {
     }
 
     return(
-      <div>
+      <div className="ColorBoxes">
         {/* render boxes array */}
         {boxes}
       </div>
